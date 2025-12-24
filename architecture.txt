@@ -1,0 +1,11 @@
+my-gin-app/
+├── cmd/api/main.go          # Инициализация DB, DI и запуск сервера
+├── internal/
+│   ├── model/               # GORM-структуры (таблицы БД)
+│   │   └── user.go          
+│   ├── repository/          # Прямая работа с GORM (*gorm.DB)
+│   │   └── user_repo.go     
+│   ├── service/             # Бизнес-логика (не знает о GORM)
+│   ├── handler/             # Gin-контроллеры
+│   └── database/            # Конфигурация и подключение к БД
+
